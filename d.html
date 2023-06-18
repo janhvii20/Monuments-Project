@@ -13,19 +13,19 @@
             <div class="abc">
             <form class="temp">
                 <div class="search-box">
-                     <select id="search-options">
-                        <option value="option1"><a href="http://127.0.0.1:5500/j.html"></a>Taj Mahal</option>
-                        <option value="option2">Qutub Minar</option>
-                        <option value="option3">Golden Temple</option>
-                        <option value="option4">Gateway of India</option>
-                        <option value="option5">Hawa Mahal</option>
-                        <option value="option6">Sanchi Stupa</option>
+                    <select id="search-options" onchange="redirectToSelectedPage()">
+                        <option value="">Select a place</option>
+                        <option value="http://127.0.0.1:5500/j.html">Taj Mahal</option>
+                        <option value="http://127.0.0.1:5500/q.html">Qutub Minar</option>
+                        <option value="http://127.0.0.1:5500/g.html">Golden Temple</option>
+                        <option value="http://127.0.0.1:5500/i.html">Gateway of India</option>
+                        <option value="http://127.0.0.1:5500/h.html">Hawa Mahal</option>
+                        <option value="http://127.0.0.1:5500/s.html">Sanchi Stupa</option>
                         <!-- Add more options as needed -->
                     </select>
                 </div>
-            </form>
-            <a href="http://127.0.0.1:5500/j.html"></a>      
-            <button class="search-button"></a>Search</button>
+            </form>  
+            <button onclick="redirectToSelectedPage()">Search</button>
         </div>
         </div>
         <div class="main">
@@ -51,6 +51,16 @@
     <footer>
         <!-- Your footer content here -->
         <a href="#top" class="back-to-top">Back to top</a>
-</footer>
-    </body>
+    </footer>
+
+    <script>
+        function redirectToSelectedPage() {
+            var select = document.getElementById("search-options");
+            var selectedOption = select.options[select.selectedIndex].value;
+            if (selectedOption) {
+                window.location.href = selectedOption;
+            }
+        }
+    </script>
+</body>
 </html>

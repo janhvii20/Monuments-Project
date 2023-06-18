@@ -83,12 +83,13 @@ address{
     line-height: 1em;
 }
 .container h1 span{
-    color:rgb(110, 29, 29)
+    color:rgb(8, 83, 55)
 }
 .container p{
-    color: white;
+    color: rgb(7, 20, 7);
     padding:20px;
     padding-left: 30px;
+    font-size: 17px;
 }
 footer{
     background-color: black;

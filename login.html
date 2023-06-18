@@ -79,13 +79,14 @@ input[type="submit"]:hover {
 <body>
   <h2>Login</h2>
   <div class="container">
-    <form
-        name="loginForm" onsubmit="return validateForm()" class="form">
+    <form class="form" name="loginForm" onsubmit="return validateForm()">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+        <input id="username" name="username" type="text" required><br><br>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" id="login" value="Login">
+        <input id="password" name="password" type="password" required><br><br>
+        <a href="http://127.0.0.1:5500/d.html">
+        <input id="login" type="submit" value="Login">
+    </a>
     </form>
 
     <img src="man.jpeg">
@@ -96,8 +97,8 @@ input[type="submit"]:hover {
     var username = document.forms["loginForm"]["username"].value;
     var password = document.forms["loginForm"]["password"].value;
 
-    if (username === "Shivam" && password === "1234") {
-        window.open('welcome.html');
+    if (username === "Janhavi" && password === "2025") {
+        window.open('http://127.0.0.1:5500/d.html');
       }
     else {
         alert("wrong input");
